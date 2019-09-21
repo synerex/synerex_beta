@@ -16,3 +16,6 @@
 [submodule "provider"]
 	path = provider
 	url = https://github.com/synerex/synerex_provider
+[submodule "proto"]
+	path = proto
+	url = https://github.com/synerex/synerex_proto
