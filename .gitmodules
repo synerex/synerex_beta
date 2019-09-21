@@ -1,0 +1,12 @@
+[submodule "api"]
+	path = api
+	url = https://github.com/synerex/synerex_api.git
+[submodule "server"]
+	path = server
+	url = https://github.com/synerex/synerex_server.git
+[submodule "nodeapi"]
+	path = nodeapi
+	url = https://github.com/synerex/synerex_nodeapi.git
+[submodule "nodeserv"]
+	path = nodeserv
+	url = https://github.com/synerex/synerex_nodeserv.git
