@@ -10,3 +10,6 @@
 [submodule "nodeserv"]
 	path = nodeserv
 	url = https://github.com/synerex/synerex_nodeserv.git
+[submodule "sxutil"]
+	path = sxutil
+	url = https://github.com/synerex/synerex_sxutil.git
