@@ -19,3 +19,6 @@
 [submodule "proto"]
 	path = proto
 	url = https://github.com/synerex/synerex_proto
+[submodule "gateway"]
+	path = gateway
+	url = https://github.com/synerex/synerex_gateway.git
