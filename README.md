@@ -5,9 +5,7 @@ Service Integration Platform for Smart Cities and Society 5.0
 Synerex beta is a beta version of Synergic Exchange and its supporting systems.
 This project is partially supported by JST MIRAI.
 
-Synerex beta is a submodule repository for Synerex service platform.
-
-This repository includes mainly for
+This repository includes following git repositories by submodules.
 - [synerex_api](https://github.com/synerex/synerex_api)
 - [synerex_nodeapi](https://github.com/synerex/synerex_nodeapi)
 - [synerex_nodeserv](https://github.com/synerex/synerex_nodeserv)
