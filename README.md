@@ -8,14 +8,14 @@ This project is partially supported by JST MIRAI.
 Synerex beta is a submodule repository for Synerex service platform.
 
 This repository includes mainly for
-- [synerex_api:https://github.com/synerex/synerex_api]
-- [synerex_nodeapi:https://github.com/synerex/synerex_nodeapi]
-- [synerex_nodeserv:https://github.com/synerex/synerex_nodeserv]
-- [synerex_server:https://github.com/synerex/synerex_server]
-- [synerex_sxutil:https://github.com/synerex/synerex_sxutil]
-- [synerex_gateway:https://github.com/synerex/synerex_gateway]
-- [synerex_proto:https://github.com/synerex/synerex_proto]
-- [synerex_provider:https://github.com/synerex/synerex_provider]
+- [synerex_api](https://github.com/synerex/synerex_api)
+- [synerex_nodeapi](https://github.com/synerex/synerex_nodeapi)
+- [synerex_nodeserv](https://github.com/synerex/synerex_nodeserv)
+- [synerex_server](https://github.com/synerex/synerex_server)
+- [synerex_sxutil](https://github.com/synerex/synerex_sxutil)
+- [synerex_gateway](https://github.com/synerex/synerex_gateway)
+- [synerex_proto](https://github.com/synerex/synerex_proto)
+- [synerex_provider](https://github.com/synerex/synerex_provider)
 
 ## Requirements
 go 1.12 or later (we use go.mod files for module dependencies)
