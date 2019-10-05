@@ -47,3 +47,12 @@ Currently, go build is required for each submodules.
 
     cd ../gateway/simple
     go build
+
+## Run with docker
+``` shell
+# build image
+docker-compose build
+
+# run docker-compose
+docker-compose up
+```
