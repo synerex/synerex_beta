@@ -48,8 +48,11 @@ Currently, go build is required for each submodules.
     cd ../gateway/simple
     go build
 
-## Run with docker
+### Run with docker
 ``` shell
+# create network
+docker network create synerex_net
+
 # build image
 docker-compose build
 
