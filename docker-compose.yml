@@ -14,7 +14,6 @@ services:
       - "nodeserv"
     volumes:
       - ./server:/go/src/github.com/synerex_server
-      - ./server/entrypoint.sh
     ports:
       - "10000:10000"
     networks: 
@@ -28,7 +27,6 @@ services:
     image: synerex_nodeserv
     volumes:
       - ./nodeserv:/go/src/github.com/synerex_nodeserv
-      - ./nodeserv/entrypoint.sh
     ports:
       - "9990:9990"
     networks: 
