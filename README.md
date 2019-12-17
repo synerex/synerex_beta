@@ -24,7 +24,7 @@ Currently, go build is required for each submodules.
 
     git clone https://github.com/synerex/synerex_beta.git
     cd synerex_beta
-    git submodule update --init –-recursive
+    git submodule update --init --recursive
 
     cd nodeserv
     go build
