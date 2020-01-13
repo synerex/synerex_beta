@@ -19,5 +19,11 @@ build: $(SUBTARGETS)
 $(SUBTARGETS):
 	$(MAKE) -C $@ $(MAKECMDGOALS)
 
+
+.PHONY: runserver
+runserver:
+	nodeserv/nodeserv &
+	server/synerex-server &
+
 .PHONY: clean
 clean: $(SUBTARGETS)
