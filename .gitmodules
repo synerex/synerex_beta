@@ -22,3 +22,9 @@
 [submodule "gateway"]
 	path = gateway
 	url = https://github.com/synerex/synerex_gateway.git
+[submodule "synerex_beta_cli"]
+	path = synerex_beta_cli
+	url = https://github.com/synerex/synerex_beta_cli.git
+[submodule "cli"]
+	path = cli
+	url = https://github.com/synerex/synerex_beta_cli.git
