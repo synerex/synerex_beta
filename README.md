@@ -16,10 +16,15 @@ This repository includes following git repositories by submodules.
 - [synerex_provider](https://github.com/synerex/synerex_provider)
 
 ## Requirements
-go 1.12 or later (we use go.mod files for module dependencies)
+go 1.13 or later (we use go.mod files for module dependencies)
 nodejs(10.13.0) / npm(6.4.1) / yarn(1.12.1) for web client development.
 
 ## Installation
+### Unix/Linux/Mac OS
+
+    make
+
+### Windows
 Currently, go build is required for each submodules.
 
     git clone https://github.com/synerex/synerex_beta.git
