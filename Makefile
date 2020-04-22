@@ -52,3 +52,6 @@ supdate:
 scommit:
 	$(GIT) submodule -q foreach --recursive 'if [ `git status -s|wc -l` -gt 0 ]; then pwd; git commit -m "update"; fi'
 
+.PHONY: sstatus
+sstatus:
+	$(GIT) submodule -q foreach --recursive git status -s
