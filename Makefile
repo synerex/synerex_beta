@@ -35,9 +35,7 @@ clean: $(SUBTARGETS)
 
 .PHONY: submodule
 submodule:
-ifeq ("do", $(DOIT))
-	$(GIT) submodule update --init --recursive
-endif
+	@if [ x$(DOIT) = "xdo" ] ; then $(GIT) submodule update --init --recursive; fi
 	$(GIT) submodule -q foreach --recursive git checkout -q master
 
 .PHONY: pushall
