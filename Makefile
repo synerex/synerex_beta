@@ -2,6 +2,7 @@
 
 GOCMD=go
 GIT=git
+MAKE=make
 GOBUILD=$(GOCMD) build
 GOCLEAN=$(GOCMD) clean
 GOTEST=$(GOCMD) test
@@ -10,7 +11,7 @@ RM=rm
 
 SUBTARGETS=nodeserv server provider/map provider/fleet
 
-DOIT = $(shell if [ 30 -gt `git submodule status --recursive | wc -l` ];then echo "do"; fi)
+DOIT=$(shell if [ 30 -gt `git submodule status --recursive | wc -l` ];then echo "do"; fi)
 
 # Main target
 .PHONY: all
@@ -20,15 +21,13 @@ all: submodule build
 build: $(SUBTARGETS)
 
 .PHONY: $(SUBTARGETS)
-
 $(SUBTARGETS):
 	$(MAKE) -C $@ $(MAKECMDGOALS)
 
-
 .PHONY: runserver
 runserver:
-	nodeserv/nodeserv &
-	server/synerex-server &
+	cd nodeserv; ./nodeserv &
+	cd server; ./synerex-server &
 
 .PHONY: clean
 clean: $(SUBTARGETS)
@@ -36,7 +35,20 @@ clean: $(SUBTARGETS)
 
 .PHONY: submodule
 submodule:
-ifeq ("do",$(DOIT))
+ifeq ("do", $(DOIT))
 	$(GIT) submodule update --init --recursive
 endif
+	$(GIT) submodule -q foreach --recursive git checkout -q master
+
+.PHONY: pushall
+pushall:
+	$(GIT) push --recurse-submodules=on-demand
+
+.PHONY: supdate
+supdate:
+	$(GIT) submodule update --remote --merge --recursive
+
+.PHONY: scommit
+scommit:
+	$(GIT) submodule -q foreach --recursive 'if [ `git status -s|wc -l` -gt 0 ]; then pwd; git commit -m "update"; fi'
 
