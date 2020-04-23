@@ -21,29 +21,32 @@ nodejs(10.13.0) / npm(6.4.1) / yarn(1.12.1) for web client development.
 
 ## Installation
 ### Unix/Linux/Mac OS
+Following step will git clone all sub-modules and update, and build basic softwares.
 
+    git clone https://github.com/synerex/synerex_beta.git
+    cd synerex_beta
     make
-
+    
 ### Windows
-Currently, go build is required for each submodules.
+In the most of directories(modules), build.bat is prepared.
 
     git clone https://github.com/synerex/synerex_beta.git
     cd synerex_beta
     git submodule update --init --recursive
 
     cd nodeserv
-    go build
+    build
 
     cd ../server
-    go build
+    build
 
 ### for Providers
 
     cd ../provider/fleet
-    go build
+    build
 
     cd ../provider/map
-    go build
+    build
 
     cd ../provider/harmovis
     go build
