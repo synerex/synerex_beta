@@ -4,6 +4,7 @@ go 1.13
 
 require (
 	github.com/go-spatial/proj v0.2.0 // indirect
+	github.com/golang/protobuf v1.3.2
 	github.com/paulmach/go.geojson v1.4.0 // indirect
 	github.com/rcrowley/go-metrics v0.0.0-20190826022208-cac0b30c2563 // indirect
 	github.com/stretchr/testify v1.4.0 // indirect
