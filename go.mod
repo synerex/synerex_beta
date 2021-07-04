@@ -1,6 +1,6 @@
 module github.com/synerex/synerex_beta
 
-go 1.13
+go 1.16
 
 require (
 	github.com/go-spatial/proj v0.2.0 // indirect
