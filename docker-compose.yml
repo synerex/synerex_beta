@@ -2,6 +2,7 @@ version: '3'
 
 services:
   server:
+    restart: always
     tty: true
     build:
       context: ./server
@@ -12,26 +13,27 @@ services:
       - SX_NODESERV_HOST=nodeserv
     depends_on:
       - "nodeserv"
-    volumes:
-      - ./server:/go/src/github.com/synerex_server
+    # volumes:
+    #   - ./server:/go/src/github.com/synerex_server
     ports:
       - "10000:10000"
-    networks: 
-      - synerex_net
-      - default
+    # networks: 
+    #   - synerex_net
+    #   - default
   nodeserv:
+    restart: always
     tty: true
     build:
       context: ./nodeserv
       dockerfile: Dockerfile
     image: synerex_nodeserv
-    volumes:
-      - ./nodeserv:/go/src/github.com/synerex_nodeserv
+    # volumes:
+    #   - ./nodeserv:/go/src/github.com/synerex_nodeserv
     ports:
       - "9990:9990"
-    networks: 
-      - synerex_net
-      - default
-networks:
-  synerex_net:
-    external: true
+    # networks: 
+    #   - synerex_net
+    #   - default
+# networks:
+#   synerex_net:
+#     external: true
